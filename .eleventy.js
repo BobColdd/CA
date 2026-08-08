@@ -1,4 +1,3 @@
-cat > .eleventy.js << 'EOF'
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
 
@@ -18,4 +17,4 @@ module.exports = function (eleventyConfig) {
     markdownTemplateEngine: "njk",
   };
 };
-EOF
+
