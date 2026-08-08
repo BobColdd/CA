@@ -1,0 +1,3 @@
+module.exports = function (eleventyConfig) { // Static assets (css, images) pass through untouched eleventyConfig.addPassthroughCopy("src/assets");
+// Collection: every note in /notes, regardless of .html or .md // This is the mechanism that makes auto-detection work — // any file dropped in src/notes/ is picked up on next build. eleventyConfig.addCollection("notes", (collectionApi) => { return collectionApi .getFilteredByGlob("src/notes/*.{html,md}") .sort((a, b) => b.date - a.date); // newest first });
+return { dir: { input: "src", includes: "_includes", output: "_site", }, // Allows Nunjucks logic ({% for %}, {{ }}) inside .html and .md files htmlTemplateEngine: "njk", markdownTemplateEngine: "njk", }; };
