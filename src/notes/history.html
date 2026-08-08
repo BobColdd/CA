@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A History of Databases</title>
+---
+layout: base.html
+title: "A History of Databases"
+date: 2026-08-08
+tags:
+  - history
+  - databases
+  - fundamentals
+---
+
 <style>
-  :root{
+  .page{
     --ink:#1a202c;
     --navy:#1a2b4c;
     --blue:#2c5282;
@@ -13,27 +17,19 @@
     --rule:#cbd5e0;
     --paper:#fdfdfc;
     --accent-bg:#f4f7fb;
-  }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;
-    background:#e9edf2;
-    font-family:Georgia, 'Times New Roman', serif;
-    color:var(--ink);
-  }
-  .page{
+
     max-width:840px;
-    margin:40px auto;
+    margin:0 auto;
     background:var(--paper);
-    padding:60px 70px 70px;
-    box-shadow:0 4px 24px rgba(0,0,0,0.08);
-    border-radius:2px;
+    padding:20px 0 40px;
+    color:var(--ink);
+    font-family:Georgia, 'Times New Roman', serif;
   }
-  header.title-block{
+  .page header.title-block{
     text-align:center;
     margin-bottom:30px;
   }
-  h1.main-title{
+  .page h1.main-title{
     font-family:'Helvetica Neue', Arial, sans-serif;
     font-weight:700;
     font-size:2.2em;
@@ -41,14 +37,14 @@
     margin:0 0 8px;
     letter-spacing:-0.5px;
   }
-  p.subtitle{
+  .page p.subtitle{
     font-family:'Helvetica Neue', Arial, sans-serif;
     font-style:italic;
     font-size:1.15em;
     color:#4a5568;
     margin:0 0 6px;
   }
-  p.byline{
+  .page p.byline{
     font-family:'Helvetica Neue', Arial, sans-serif;
     font-size:0.9em;
     color:var(--muted);
@@ -56,12 +52,12 @@
     margin:14px auto 0;
     line-height:1.5;
   }
-  hr{
+  .page hr{
     border:none;
     border-top:1px solid var(--rule);
     margin:22px 0 30px;
   }
-  h2{
+  .page h2{
     font-family:'Helvetica Neue', Arial, sans-serif;
     font-weight:700;
     font-size:1.35em;
@@ -70,38 +66,38 @@
     padding-bottom:6px;
     border-bottom:2px solid var(--accent-bg);
   }
-  h3{
+  .page h3{
     font-family:'Helvetica Neue', Arial, sans-serif;
     font-weight:700;
     font-size:1.08em;
     color:var(--blue);
     margin:22px 0 8px;
   }
-  p{
+  .page p{
     font-size:1.02em;
     line-height:1.7;
     text-align:justify;
     margin:0 0 14px;
   }
-  ul{
+  .page ul{
     margin:0 0 16px;
     padding-left:22px;
   }
-  li{
+  .page li{
     line-height:1.65;
     margin-bottom:8px;
   }
-  li b{ color:var(--blue); }
-  .timeline{
+  .page li b{ color:var(--blue); }
+  .page .timeline{
     list-style:none;
     padding-left:0;
     border-left:3px solid var(--accent-bg);
   }
-  .timeline li{
+  .page .timeline li{
     position:relative;
     padding:2px 0 12px 22px;
   }
-  .timeline li::before{
+  .page .timeline li::before{
     content:"";
     position:absolute;
     left:-8px;
@@ -112,15 +108,15 @@
     background:var(--blue);
     border:2px solid var(--paper);
   }
-  .closing{
+  .page .closing{
     margin-top:36px;
     padding:22px 26px;
     background:var(--accent-bg);
     border-left:4px solid var(--blue);
     border-radius:2px;
   }
-  .closing p{ margin:0; }
-  footer{
+  .page .closing p{ margin:0; }
+  .page footer{
     margin-top:40px;
     text-align:center;
     font-family:'Helvetica Neue', Arial, sans-serif;
@@ -129,16 +125,11 @@
     color:var(--muted);
   }
   @media (max-width:600px){
-    .page{ padding:34px 22px 40px; }
-    h1.main-title{ font-size:1.6em; }
-  }
-  @media print{
-    body{ background:#fff; }
-    .page{ box-shadow:none; margin:0; max-width:100%; }
+    .page{ padding:20px 4px 40px; }
+    .page h1.main-title{ font-size:1.6em; }
   }
 </style>
-</head>
-<body>
+
 <div class="page">
 
   <header class="title-block">
@@ -402,5 +393,3 @@
   <footer>Prepared as a general-interest historical overview.</footer>
 
 </div>
-</body>
-</html>
