@@ -1,0 +1,24 @@
+---
+layout: base.html
+title: Home
+---
+
+<h2>Notes Directory</h2>
+
+<ul class="notes-list">
+{% for note in collections.notes %}
+  <li class="notes-list-item">
+    <a href="{{ note.url }}">{{ note.data.title }}</a>
+    {% if note.data.date %}
+      <time datetime="{{ note.data.date }}">{{ note.data.date.toDateString() }}</time>
+    {% endif %}
+    {% if note.data.tags %}
+      <div class="tags">
+        {% for tag in note.data.tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>
