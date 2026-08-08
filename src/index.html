@@ -3,11 +3,15 @@ layout: base.html
 title: Home
 ---
 
-<h2>Notes Directory</h2>
+<h2>Notes directory</h2>
 
 <ul class="notes-list">
 {% for note in collections.notes %}
-  <li class="notes-list-item">
+  <li
+    class="notes-list-item"
+    data-title="{{ note.data.title }}"
+    data-tags="{{ note.data.tags | join(',') }}"
+  >
     <a href="{{ note.url }}">{{ note.data.title }}</a>
     {% if note.data.date %}
       <time datetime="{{ note.data.date }}">{{ note.data.date.toDateString() }}</time>
@@ -22,3 +26,5 @@ title: Home
   </li>
 {% endfor %}
 </ul>
+
+<p class="no-results">No notes match your search.</p>
