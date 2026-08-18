@@ -19,6 +19,8 @@
       --accent-hover: #2c5282;
       --border: #dce3ed;
       --shadow: rgba(26, 43, 76, 0.08);
+      --rail-width: 260px;
+      --rail-collapsed: 0px;
     }
 
     body {
@@ -38,7 +40,7 @@
 
     /* Sidebar */
     .rail {
-      width: 260px;
+      width: var(--rail-width);
       background: var(--bg-secondary);
       border-right: 1px solid var(--border);
       padding: 24px 16px;
@@ -49,7 +51,14 @@
       height: 100vh;
       overflow-y: auto;
       flex-shrink: 0;
-      transition: transform 0.3s ease;
+      transition: width 0.3s ease, transform 0.3s ease;
+    }
+
+    .rail.collapsed {
+      width: 0;
+      padding: 0;
+      overflow: hidden;
+      border-right: none;
     }
 
     .rail-top {
@@ -178,6 +187,7 @@
       flex-direction: column;
       min-height: 100vh;
       background: var(--bg-primary);
+      transition: margin-left 0.3s ease;
     }
 
     /* Topbar */
@@ -194,14 +204,16 @@
     }
 
     .rail-toggle {
-      display: none;
       background: none;
       border: none;
       color: var(--text-secondary);
       cursor: pointer;
-      padding: 6px;
+      padding: 8px;
       border-radius: 6px;
       transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .rail-toggle:hover {
@@ -336,18 +348,16 @@
         top: 0;
         bottom: 0;
         z-index: 100;
-        transform: translateX(-100%);
+        transform: translateX(0);
         width: 280px;
-        background: var(--bg-secondary);
         box-shadow: 4px 0 30px rgba(0, 0, 0, 0.1);
       }
 
-      .rail.open {
-        transform: translateX(0);
-      }
-
-      .rail-toggle {
-        display: block;
+      .rail.collapsed {
+        transform: translateX(-100%);
+        width: 280px;
+        padding: 24px 16px;
+        border-right: 1px solid var(--border);
       }
 
       .topbar {
@@ -470,20 +480,20 @@
   </div>
 
   <script>
-    // Mobile sidebar toggle
+    // Toggle sidebar
     const toggle = document.getElementById('rail-toggle');
     const rail = document.getElementById('rail');
 
     if (toggle && rail) {
       toggle.addEventListener('click', function() {
-        rail.classList.toggle('open');
+        rail.classList.toggle('collapsed');
       });
 
       // Close sidebar when clicking outside on mobile
       document.addEventListener('click', function(e) {
         if (window.innerWidth <= 768) {
           if (!rail.contains(e.target) && !toggle.contains(e.target)) {
-            rail.classList.remove('open');
+            rail.classList.add('collapsed');
           }
         }
       });
