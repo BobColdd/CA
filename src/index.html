@@ -7,6 +7,7 @@ title: Notes Directory
   .notes-page {
     max-width: 780px;
     margin: 0 auto;
+    padding: 0 20px;
   }
 
   .notes-page h1 {
@@ -44,18 +45,6 @@ title: Notes Directory
     text-decoration: underline;
   }
 
-  .notes-list-item .meta {
-    font-size: 13px;
-    color: #8a9aaa;
-    margin-top: 2px;
-  }
-
-  .notes-list-item .meta .tag {
-    display: inline-block;
-    margin-right: 8px;
-    color: #6a8aaa;
-  }
-
   .empty-state {
     text-align: center;
     padding: 60px 20px;
@@ -71,14 +60,6 @@ title: Notes Directory
     {% for note in collections.notes %}
       <li class="notes-list-item">
         <a href="{{ note.url }}">{{ note.data.title }}</a>
-        <div class="meta">
-          {% if note.data.date %}{{ note.data.date }}{% endif %}
-          {% if note.data.tags %}
-            {% for tag in note.data.tags %}
-              <span class="tag">#{{ tag }}</span>
-            {% endfor %}
-          {% endif %}
-        </div>
       </li>
     {% else %}
       <li class="empty-state">No notes yet. Add a note to the <code>notes/</code> folder.</li>
