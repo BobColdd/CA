@@ -3,46 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Cold Analytica</title>
+  <title>Notes Directory</title>
   <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #ffffff;
+      color: #1a2b4c;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+
+    .site-content {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 24px 48px;
+    }
+
+    .site-content h1 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #0a1628;
+      margin: 0 0 24px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e8edf3;
+    }
+
+    .notes-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .notes-list-item {
+      padding: 14px 0;
+      border-bottom: 1px solid #f0f3f7;
+    }
+
+    .notes-list-item:last-child {
+      border-bottom: none;
+    }
+
+    .notes-list-item a {
+      font-size: 16px;
+      font-weight: 500;
+      color: #1a3a6b;
+      text-decoration: none;
+    }
+
+    .notes-list-item a:hover {
+      color: #2c5282;
+      text-decoration: underline;
+    }
+
+    .notes-list-item time {
+      display: block;
+      font-size: 13px;
+      color: #6a8aaa;
+      margin-top: 2px;
+    }
+
+    .tags {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 4px 8px;
+      margin-top: 4px;
+    }
+
+    .tag {
+      font-size: 12px;
+      color: #5a7a9a;
+      background: #f4f7fb;
+      padding: 1px 10px;
+      border-radius: 3px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: #6a8aaa;
+      font-size: 16px;
+    }
+
+    .site-footer {
+      padding: 20px 24px 32px;
+      text-align: center;
+      border-top: 1px solid #e8edf3;
+      font-size: 13px;
+      color: #6a8aaa;
+    }
+
+    @media (max-width: 640px) {
+      .site-content {
+        padding: 24px 16px 32px;
+      }
+
+      .site-content h1 {
+        font-size: 19px;
+      }
+
+      .notes-list-item {
+        padding: 12px 0;
+      }
+
+      .notes-list-item a {
+        font-size: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <header class="site-header">
-    <a href="/" class="brand">Cold Analytica</a>
-    <p class="tagline">Database &amp; Data Engineering Notes</p>
-  </header>
-
   <main class="site-content">
     
-<h2>Notes Directory</h2>
+<h1>Notes Directory</h1>
 
 <ul class="notes-list">
 
-  <li class="notes-list-item">
-    <a href="/notes/example-note/">Indexing Strategies in PostgreSQL</a>
-    
-      <time datetime="Mon Jan 15 2024 03:00:00 GMT+0300 (East Africa Time)">Mon Jan 15 2024</time>
-    
-    
-      <div class="tags">
-        
-          <span class="tag">postgresql</span>
-        
-          <span class="tag">indexing</span>
-        
-          <span class="tag">performance</span>
-        
-      </div>
-    
-  </li>
+  <!-- No notes yet -->
 
 </ul>
 
   </main>
 
   <footer class="site-footer">
-    <p>Cold Analytica — structured notes archive.</p>
+    <p>Notes directory &mdash; structured academic references</p>
   </footer>
 
 </body>
