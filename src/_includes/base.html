@@ -5,6 +5,384 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} | Denis Kiprop Kirui</title>
   <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    /* Dark Blue Text Theme — White Background */
+    .portal {
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8fafc;
+      --bg-card: #f1f4f9;
+      --bg-hover: #e8edf5;
+      --text-primary: #0a1628;
+      --text-secondary: #1a2b4c;
+      --text-muted: #3b5a7a;
+      --accent: #1a3a6b;
+      --accent-hover: #2c5282;
+      --border: #dce3ed;
+      --shadow: rgba(26, 43, 76, 0.08);
+    }
+
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+
+    .portal {
+      display: flex;
+      min-height: 100vh;
+      background: var(--bg-primary);
+    }
+
+    /* Sidebar */
+    .rail {
+      width: 260px;
+      background: var(--bg-secondary);
+      border-right: 1px solid var(--border);
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .rail-top {
+      margin-bottom: 32px;
+    }
+
+    .rail-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 4px;
+    }
+
+    .rail-mark {
+      width: 40px;
+      height: 40px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .rail-name {
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--text-primary);
+      letter-spacing: -0.3px;
+      line-height: 1.2;
+    }
+
+    .rail-name small {
+      display: block;
+      font-weight: 400;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .rail-section {
+      margin-bottom: 28px;
+    }
+
+    .rail-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      padding: 0 4px;
+    }
+
+    .rail-link {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 8px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      margin-bottom: 2px;
+    }
+
+    .rail-link:hover {
+      background: var(--bg-hover);
+      color: var(--accent);
+    }
+
+    .rail-link-active {
+      background: var(--bg-hover);
+      color: var(--accent);
+    }
+
+    .rail-bottom {
+      margin-top: auto;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .rail-contact {
+      padding: 12px;
+      background: var(--bg-card);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .rail-contact .label {
+      color: var(--text-muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .rail-contact .value {
+      color: var(--text-secondary);
+      display: block;
+    }
+
+    .rail-contact .value a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .rail-contact .value a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
+    /* Main Content */
+    .portal-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: var(--bg-primary);
+    }
+
+    /* Topbar */
+    .topbar {
+      padding: 16px 32px;
+      background: var(--bg-primary);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .rail-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 6px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    .rail-toggle:hover {
+      background: var(--bg-hover);
+      color: var(--accent);
+    }
+
+    .search-wrap {
+      flex: 1;
+      max-width: 500px;
+      position: relative;
+      margin-left: auto;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px 12px 10px 40px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text-primary);
+      font-size: 14px;
+      transition: all 0.3s ease;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .search-input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(26, 58, 107, 0.12);
+      background: var(--bg-primary);
+    }
+
+    /* Site Content */
+    .site-content {
+      flex: 1;
+      padding: 40px 48px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
+      color: var(--text-primary);
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: 20px 32px;
+      border-top: 1px solid var(--border);
+      background: var(--bg-primary);
+      margin-top: auto;
+    }
+
+    .site-footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .site-footer-inner .brand {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .site-footer-inner .contact-info {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .site-footer-inner .contact-info span {
+      color: var(--text-muted);
+    }
+
+    .site-footer-inner .contact-info a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .site-footer-inner .contact-info a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
+    .site-footer-inner .separator {
+      color: var(--border);
+    }
+
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-secondary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--text-muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .rail {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 100;
+        transform: translateX(-100%);
+        width: 280px;
+        background: var(--bg-secondary);
+        box-shadow: 4px 0 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .rail.open {
+        transform: translateX(0);
+      }
+
+      .rail-toggle {
+        display: block;
+      }
+
+      .topbar {
+        padding: 12px 16px;
+      }
+
+      .site-content {
+        padding: 24px 16px 16px;
+      }
+
+      .site-footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+      }
+
+      .site-footer-inner .contact-info {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .search-wrap {
+        max-width: 100%;
+      }
+
+      .site-content {
+        padding: 16px 12px 12px;
+      }
+
+      .rail {
+        width: 260px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -14,7 +392,10 @@
       <div class="rail-top">
         <div class="rail-brand">
           <div class="rail-mark">DK</div>
-          <span class="rail-name">Denis Kiprop Kirui</span>
+          <span class="rail-name">
+            Denis Kiprop Kirui
+            <small>BSc Information Technology</small>
+          </span>
         </div>
       </div>
 
@@ -31,10 +412,15 @@
       </div>
 
       <div class="rail-section rail-bottom">
-        <span class="rail-label">Account</span>
-        <a href="/login/" class="rail-link" id="rail-auth-link">
-          Sign in
-        </a>
+        <span class="rail-label">Contact</span>
+        <div class="rail-contact">
+          <span class="label">Phone</span>
+          <span class="value">+254 712 600 195</span>
+          <span class="label" style="margin-top:8px;">Email</span>
+          <span class="value"><a href="mailto:kiruirop15@gmail.com">kiruirop15@gmail.com</a></span>
+          <span class="label" style="margin-top:8px;">Web</span>
+          <span class="value"><a href="https://denis.neckhards.org" target="_blank" rel="noopener">denis.neckhards.org</a></span>
+        </div>
       </div>
     </aside>
 
@@ -42,7 +428,7 @@
 
       <header class="topbar">
         <button class="rail-toggle" id="rail-toggle" aria-label="Toggle sidebar">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="6" x2="21" y2="6"/>
             <line x1="3" y1="12" x2="21" y2="12"/>
             <line x1="3" y1="18" x2="21" y2="18"/>
@@ -69,13 +455,40 @@
 
       <footer class="site-footer">
         <div class="site-footer-inner">
-          <span>Denis Kiprop Kirui</span>
-          <span>+254712600195 | kiruirop15@gmail.com | denis.neckhards.org</span>
+          <span class="brand">Denis Kiprop Kirui</span>
+          <div class="contact-info">
+            <span>+254 712 600 195</span>
+            <span class="separator">|</span>
+            <span><a href="mailto:kiruirop15@gmail.com">kiruirop15@gmail.com</a></span>
+            <span class="separator">|</span>
+            <span><a href="https://denis.neckhards.org" target="_blank" rel="noopener">denis.neckhards.org</a></span>
+          </div>
         </div>
       </footer>
 
     </div>
   </div>
+
+  <script>
+    // Mobile sidebar toggle
+    const toggle = document.getElementById('rail-toggle');
+    const rail = document.getElementById('rail');
+
+    if (toggle && rail) {
+      toggle.addEventListener('click', function() {
+        rail.classList.toggle('open');
+      });
+
+      // Close sidebar when clicking outside on mobile
+      document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          if (!rail.contains(e.target) && !toggle.contains(e.target)) {
+            rail.classList.remove('open');
+          }
+        }
+      });
+    }
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="/assets/auth.js"></script>
