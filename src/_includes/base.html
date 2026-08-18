@@ -259,15 +259,21 @@
       background: var(--bg-primary);
     }
 
-    /* Site Content */
+    /* Site Content - FIXED: No centering, full width */
     .site-content {
       flex: 1;
       padding: 40px 48px 20px;
-      max-width: 900px;
-      margin: 0 auto;
+      max-width: 100%;
+      margin: 0;
       width: 100%;
       box-sizing: border-box;
       color: var(--text-primary);
+    }
+
+    /* Content wrapper for articles that need some width limit */
+    .content-wrapper {
+      max-width: 820px;
+      margin: 0;
     }
 
     /* Footer */
@@ -279,8 +285,8 @@
     }
 
     .site-footer-inner {
-      max-width: 900px;
-      margin: 0 auto;
+      max-width: 100%;
+      margin: 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
