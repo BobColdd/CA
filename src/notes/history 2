@@ -1,7 +1,7 @@
 ---
 layout: base.html
 title: "A History of Databases"
-date: 2026-08-18
+date: 2026-07-10
 tags:
   - history
   - databases
@@ -135,101 +135,53 @@ tags:
   <header class="title-block">
     <h1 class="main-title">A History of Databases</h1>
     <p class="subtitle">From Clay Tablets to AI Agents</p>
-    <p class="byline">Databases are everywhere. Whether you realize it or not, you interact with them daily — from government tax records to lab notebooks. Understanding their history reveals why they are fundamental to every corner of computer science and modern life.</p>
+    <p class="byline">Databases are databases. As you read along, keep in mind that databases are indeed databases. That should simplify your understanding on concepts around databases. It is essential to understand the history of anything if you are going to use it often. We all consume databases, though differently. There is a very high chance that you shall hear this term when dealing in any computer Science niche. It could be you are interacting with professionals like software engineers, data specialists, computer scientists or information technologists or you are one.</p>
   </header>
   <hr>
 
-  <h2>1. Before Computers: The Administrative Origins of Data</h2>
-  <p>Long before anyone spoke of "databases," human societies were already solving the database problem. At its core, a database is simply a structured way to store, organize, and retrieve information reliably. The challenge is as old as civilization itself — and the earliest databases were built not from silicon, but from clay, papyrus, and stone.</p>
+  <h2>Introduction</h2>
+  <p>There are many forms of databases that we handle on a daily basis. For instance, if you are a lab technician or a researcher, you are more likely to work with small size papers to write your 'rough work'. That is a database. We humans across the world have government systems, and for these systems to function, money is needed — thus we have taxation. The earliest databases held tax records.</p>
 
-  <h3>Mesopotamia: The First Recordkeepers</h3>
-  <p>In ancient Sumer, roughly five thousand years ago, temple administrators faced a timeless problem: tracking grain deliveries, livestock counts, land allotments, and tax obligations across a growing bureaucracy. Their answer was cuneiform writing pressed into wet clay tablets. These tablets followed rigid, repeated formats — a quantity, a commodity, a responsible person, a date, a place. This regularity is the essence of a data record: fixed fields, consistent structure, and a predictable way to encode facts for later retrieval.</p>
-  <p>Sumerian archives organized tablets by subject in labeled baskets — an early form of indexing. Some tablets were even structured as tables with rows and columns, long before spreadsheets existed.</p>
+  <h2>Ancient Databases: Egypt and the Nile</h2>
+  <p>Egyptians had databases where they would record crop quantity after harvests, land sizes, and other important information. Across the river Nile, there were seasons when the river would stretch its width — when it would flood. For this reason, it was necessary to store records of land measurements so that after the floods were gone, land would be divided as it were. These records were kept in clay tablets.</p>
 
-  <h3>Egypt: Registries, Censuses, and the Bureaucratic State</h3>
-  <p>Ancient Egypt took record-keeping further, using papyrus instead of clay. The Nile's annual floods made land measurement critical: after each flood season, land boundaries needed restoration. Scribes maintained land registers to support fair taxation, grain-storage ledgers to prevent famine, and labor rosters for state projects. Egypt also pioneered periodic censuses — systematic, repeated data collection used directly for governance and taxation — a practice that would not be formalized again at scale until early modern Europe.</p>
-  <p>Papyrus was lighter and more compact than clay, enabling cross-referenced documents and organized archives. Scrolls were stored in labeled jars and rooms, retrievable by category.</p>
+  <h2>The Punch Card Revolution</h2>
+  <p>For all we know, the Americans and the Europeans have really spearheaded data evolution to what we have today. During the 1880 census in United States of America, an idea was hatched. This was because the census back then never achieved its purpose — counting took so long (populations were growing) that by the time the country would finish counting, the population had grown significantly, making this whole process appear useless. An innovator by the name Herman Hollerith came up with a punched cards tabulating machine. This invention later grew to become IBM.</p>
 
-  <h3>Libraries as Structured Knowledge Stores</h3>
-  <p>The Library of Alexandria, founded in the third century BCE, developed catalogue systems — most notably Callimachus's Pinakes — to classify works by subject and author across hundreds of thousands of scrolls. This was an early metadata system: a catalogue record standing in for a document, allowing retrieval by attribute rather than by physical browsing. The core ideas that define databases today — structured records, indexing, controlled vocabularies — were all present over two thousand years before the first computer.</p>
+  <h2>The Computer Age Begins</h2>
+  <p>Then came the 20th century, where computers became commonly used in war to decrypt data. After the end of World War II, punch cards were replaced by computers which used magnetic tapes. As computers advanced, hard disk drives were created, which meant other database ideas came into place.</p>
 
-  <h2>2. Mechanizing the Record: Punch Cards and Tabulation</h2>
-  <p>The next major leap came not from a computer, but from one overwhelming administrative challenge. The 1880 United States Census took nearly eight years to tabulate by hand. Officials feared the 1890 census, given rapid population growth, would not finish before the next one began, rendering the entire effort useless.</p>
-  <p>Herman Hollerith, an engineer working with the Census Bureau, solved this with punched cards and an electromechanical tabulating machine. Each card represented one person or household, with holes at fixed positions encoding attributes like age, occupation, and marital status. This was the first mechanized record format with fixed fields and machine-readable structure. The 1890 census was completed in about a year. Hollerith's Tabulating Machine Company later merged with others to become, in 1924, the Computing-Tabulating-Recording Company's successor: IBM.</p>
-  <p>For decades, punch cards and magnetic tape remained the primary data medium. Records were processed in batches — a deck of cards or tape reel read sequentially. There was no concept of a "query" in the modern sense. Retrieving a single record meant physically locating a card or scanning an entire tape. This sequential model dominated business computing into the 1960s.</p>
+  <h2>The Hierarchical and Network Models</h2>
+  <p>Herman's IBM came up with the hierarchical model, while Charles Bachman came up with Bachman's network model. This did not last long before a major innovation broke into the scene.</p>
 
-  <h2>3. The First True Databases: Hierarchical and Network Models</h2>
-  <p>The term "database" emerged in the early 1960s, as computers began storing data on magnetic disks rather than tape. Disks allowed random access — jumping directly to a record — enabling software designed specifically for managing shared, queryable collections of data.</p>
+  <h2>The Relational Revolution</h2>
+  <p>Edgar Codd published a paper, <em>A Relational Model of Data for Large Shared Data Banks</em>. This relational model has been used all along to this date. It is under the relational model that we have had the introduction and implementation of Structured Query Language (SQL). SQL is today used in MySQL, SQLite, PostgreSQL and Oracle databases, among others.</p>
 
-  <h3>IBM's IMS and the Hierarchical Model</h3>
-  <p>In 1966, IBM began developing the Information Management System (IMS), commissioned to track the enormous bill-of-materials data for the Apollo space program, involving millions of components. IMS organized data as a strict hierarchy of parent and child records, similar to a tree structure. This worked well for predictable relationships like parts lists, but forced designers to anticipate access patterns in advance. Remarkably, IMS remains in active use today in banking and airline systems, over half a century later.</p>
+  <h2>The Rise of NoSQL</h2>
+  <p>It is important to mention that though SQL is widely used, other innovators have come up with non-relational databases formally referred to as NoSQL. For instance, MongoDB is a non-relational database.</p>
 
-  <h3>CODASYL and the Network Model</h3>
-  <p>In parallel, the Conference on Data Systems Languages (CODASYL) developed the network model, championed by Charles Bachman. Unlike a strict tree, records could have multiple parents, forming a flexible graph of relationships. Bachman's Integrated Data Store (IDS), built at General Electric in 1963–64, is often considered the first true database management system. He received the Turing Award in 1973 for this work.</p>
-  <p>Both hierarchical and network databases were powerful but demanding. Programmers navigated data structures manually, one pointer at a time. Schema changes could break every application built on top. Something simpler and more mathematically grounded was needed.</p>
+  <h2>The AI Era</h2>
+  <p>We are now in a transition because of the emergence of Artificial Intelligence (AI). The emergence of AI has meant that AI agents like Anthropic and OpenAI are now interacting with databases more than human beings are.</p>
 
-  <h2>4. Edgar Codd and the Relational Revolution</h2>
-  <p>In 1970, Edgar F. Codd, a British mathematician at IBM's San Jose research laboratory, published <em>A Relational Model of Data for Large Shared Data Banks</em> — one of the most consequential papers in computer science history.</p>
-  <p>Codd's insight was to separate logical structure from physical storage. Instead of pointers and trees, he proposed representing all data simply as tables — relations, in mathematical terms — grounded in set theory and predicate logic. Users could ask questions without knowing how data was stored. The database system itself would figure out the most efficient way to answer.</p>
-  <p>This radical simplification introduced foundational ideas:</p>
-  <ul>
-    <li><b>Tables and tuples</b> — data organized into relations, each row a tuple of attribute values.</li>
-    <li><b>Data independence</b> — applications insulated from physical storage changes.</li>
-    <li><b>Declarative querying</b> — describing <em>what</em> data is wanted, not <em>how</em> to fetch it.</li>
-    <li><b>Normalization</b> — formal discipline for minimizing redundancy and avoiding update anomalies.</li>
-  </ul>
-  <p>IBM was initially reluctant to build a product around Codd's ideas, fearing it would cannibalize IMS revenue. But researchers pursued prototypes anyway. Meanwhile, at the University of California, Berkeley, Michael Stonebraker and Eugene Wong began the Ingres project, whose lineage later fed into Sybase, Microsoft SQL Server, and PostgreSQL.</p>
-
-  <h3>System R and the Birth of SQL</h3>
-  <p>IBM's relational prototype, System R, built through the mid-1970s, proved relational databases could be fast enough for real use. It introduced a query language called SEQUEL — Structured English Query Language — designed by Donald Chamberlin and Raymond Boyce to make relational algebra accessible using English-like syntax. Renamed SQL, it became the dominant language for interacting with relational data.</p>
-  <p>Ironically, the first commercial relational database came not from IBM but from a small startup founded in 1977 by Larry Ellison, Bob Miner, and Ed Oates. Having read Codd's paper, they raced ahead and shipped Oracle in 1979 — two years before IBM's own SQL/DS, followed by DB2 in 1983. Codd's theoretical breakthrough had become a multi-billion-dollar industry within a decade.</p>
-
-  <h2>5. Relational Databases Take Over the Enterprise</h2>
-  <p>Through the 1980s and 1990s, relational database management systems (RDBMSs) became the backbone of business computing. Oracle, IBM DB2, Sybase, and later Microsoft SQL Server competed for the enterprise market. Open-source efforts produced systems still widely used today: PostgreSQL, tracing back to Stonebraker's Berkeley POSTGRES project, and MySQL, released in 1995, which became the default database for the web alongside Linux, Apache, and PHP — the "LAMP stack."</p>
-  <p>This era formalized transactional reliability through the ACID properties — Atomicity, Consistency, Isolation, Durability — articulated by researchers like Jim Gray, another Turing Award winner. His work made it possible to trust that a bank transfer or airline booking would complete fully or not at all, even during crashes or concurrent access. By the late 1990s, the relational model, SQL, and ACID transactions were simply how serious data was managed.</p>
-
-  <h2>6. Cracks in the Model: The Rise of NoSQL</h2>
-  <p>The internet's growth in the 2000s changed everything. Companies like Google, Amazon, and Facebook managed data at a volume and velocity — billions of users, globally distributed, constantly written and read — that strained traditional relational systems designed to scale "up" rather than "out" across many machines.</p>
-  <p>Two influential papers reshaped the field. Google's 2006 Bigtable paper described a distributed storage system spanning thousands of commodity servers. Amazon's 2007 Dynamo paper described a highly available key-value store prioritizing availability over strict consistency — a trade-off formalized by Eric Brewer's CAP theorem, which holds that distributed systems can guarantee at most two of Consistency, Availability, and Partition tolerance at once.</p>
-  <p>These ideas spawned "NoSQL" databases, each optimized for specific problem shapes:</p>
-  <ul>
-    <li><b>Key-value stores</b> (Redis, DynamoDB) — fast lookups by key, ideal for caching and session data.</li>
-    <li><b>Document databases</b> (MongoDB, CouchDB) — flexible, schema-less JSON documents, popular for evolving web applications.</li>
-    <li><b>Column-family stores</b> (Cassandra, HBase, Bigtable) — built for massive write throughput across distributed clusters.</li>
-    <li><b>Graph databases</b> (Neo4j) — optimized for traversing dense relationships like social graphs or fraud-detection networks.</li>
-  </ul>
-  <p>NoSQL systems traded some strong consistency and rigid schemas for horizontal scalability and developer flexibility. By the 2010s, most large organizations ran a mix of relational and non-relational systems — "polyglot persistence."</p>
-
-  <h3>NewSQL and the Cloud</h3>
-  <p>The next decade produced a synthesis: "NewSQL" systems like Google Spanner, CockroachDB, and Amazon Aurora combined NoSQL's horizontal scalability with relational consistency and SQL interfaces. Meanwhile, databases increasingly became services rather than installed software — Amazon RDS, Google Cloud SQL, Snowflake, and similar platforms let organizations rent elastic, auto-scaling infrastructure rather than managing it themselves.</p>
-
-  <h2>7. The AI Era: Agents, Vectors, and Retrieval</h2>
-  <p>We are now in another transition. The rise of large language models and generative AI in the 2020s introduced new ways of interacting with databases. AI agents — systems like Anthropic's Claude and OpenAI's models — are now querying databases directly, often more frequently than humans do.</p>
-  <p>But AI has also introduced a new kind of data to manage: high-dimensional vector embeddings — numerical representations capturing the semantic meaning of text, images, or audio. Similar concepts become mathematically close vectors, even without shared words. Finding the nearest vectors among millions is fundamentally different from exact-key lookups or equality filtering, and traditional relational indexes are poorly suited for it.</p>
-  <p>This has driven the emergence of vector databases and search engines — Pinecone, Weaviate, Milvus, and Qdrant — built around approximate nearest-neighbor algorithms like HNSW. At the same time, established databases have absorbed this capability: PostgreSQL gained vector search through pgvector, and Elasticsearch, MongoDB, and Redis have added native vector indexing.</p>
-  <p>This capability underpins retrieval-augmented generation (RAG), now a common architecture in production AI systems. A language model's answer is grounded by first retrieving relevant passages from a vector database — letting a general-purpose model reason over private, current documents rather than only its training data.</p>
-  <p>AI is also reshaping how people interact with conventional databases. Natural-language-to-SQL tools let non-technical users query structured data conversationally. Database systems increasingly use machine learning internally for query performance prediction, automatic index tuning, and anomaly detection — a direction called "self-driving" or autonomous databases.</p>
-  <p>In a real sense, the field has come full circle. Five thousand years ago, the challenge was encoding meaning into durable structured symbols — marks in clay standing for measures of grain. Today's challenge is encoding meaning into vector embeddings so they too can be reliably stored, indexed, and retrieved. The medium has changed completely. The underlying problem has not.</p>
-
-  <h2>8. Timeline at a Glance</h2>
+  <h2>Timeline at a Glance</h2>
   <ul class="timeline">
-    <li><b>~3200 BCE</b> — Cuneiform record-keeping on clay tablets in Sumer.</li>
-    <li><b>~2500–1500 BCE</b> — Egyptian papyrus registries, censuses, and land archives.</li>
-    <li><b>3rd c. BCE</b> — Library of Alexandria and Callimachus's Pinakes catalogue.</li>
-    <li><b>1890</b> — Hollerith's punched-card tabulator processes the U.S. Census.</li>
-    <li><b>1960s</b> — Random-access disks enable the first true database systems.</li>
-    <li><b>1966</b> — IBM begins developing IMS (hierarchical model) for Apollo.</li>
-    <li><b>1963–1973</b> — Bachman's IDS and the CODASYL network model.</li>
+    <li><b>Ancient Egypt</b> — Clay tablets record crop yields, land sizes, and taxes after Nile floods.</li>
+    <li><b>1880s</b> — U.S. Census tabulation takes too long; process appears useless.</li>
+    <li><b>1890</b> — Herman Hollerith's punched-card tabulator solves the census problem.</li>
+    <li><b>1924</b> — Hollerith's company becomes IBM.</li>
+    <li><b>1940s</b> — Computers used in World War II for code-breaking.</li>
+    <li><b>Post-WWII</b> — Punch cards replaced by magnetic tape computers.</li>
+    <li><b>1960s</b> — Hard disk drives enable true database systems.</li>
+    <li><b>1960s</b> — IBM's hierarchical model and Charles Bachman's network model.</li>
     <li><b>1970</b> — Edgar Codd publishes the relational model.</li>
-    <li><b>1974–1979</b> — IBM's System R and SQL; Oracle ships the first commercial SQL RDBMS.</li>
-    <li><b>1980s–1990s</b> — Enterprise RDBMS era: DB2, Sybase, SQL Server, PostgreSQL, MySQL.</li>
-    <li><b>2006–2007</b> — Google Bigtable and Amazon Dynamo papers spark the NoSQL movement.</li>
-    <li><b>2010s</b> — Cloud-managed databases and NewSQL systems combine scale with consistency.</li>
-    <li><b>2020s</b> — Vector databases, RAG, and AI agents interacting with databases.</li>
+    <li><b>1970s</b> — SQL is introduced and implemented.</li>
+    <li><b>1980s–1990s</b> — Relational databases dominate enterprise computing.</li>
+    <li><b>2000s</b> — NoSQL databases like MongoDB emerge.</li>
+    <li><b>2020s</b> — AI agents (Anthropic, OpenAI) interact with databases more than humans.</li>
   </ul>
 
   <div class="closing">
-    <p>Every era's database reflects what that era most needed to remember and how fast it needed to retrieve it. Sumerian scribes needed to prove grain debts. Cold War programmers needed to track spacecraft parts. Web engineers needed pages to load in milliseconds for billions of users. Today's systems need to retrieve not just facts, but meaning — and increasingly, they serve AI agents as much as humans. The tools keep changing. The underlying human project — building trustworthy memory at scale — does not.</p>
+    <p>Databases are databases. From Egyptian scribes recording land boundaries after the Nile's floods to AI agents querying vast repositories, the tools change but the fundamental purpose remains: to store information reliably and make it retrievable when needed. Whether you are a lab technician with rough notes, a software engineer building complex systems, or an AI agent processing data — we all interact with databases, though differently. Understanding this history helps us appreciate why databases are fundamental to every corner of computer science and modern life.</p>
   </div>
 
   <footer>Prepared as a general-interest historical overview.</footer>
