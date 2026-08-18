@@ -1,0 +1,189 @@
+---
+layout: base.html
+title: "Data Engineers vs Software Engineers"
+date: 2026-08-18
+tags:
+  - data engineering
+  - software engineering
+  - fundamentals
+---
+
+<style>
+  .page-content {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 30px 20px 50px;
+    color: #1a202c;
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+
+  .page-content header.title-block {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .page-content h1.main-title {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 2.4em;
+    color: #1a2b4c;
+    margin: 0 0 8px;
+    letter-spacing: -0.5px;
+  }
+
+  .page-content p.subtitle {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-style: italic;
+    font-size: 1.2em;
+    color: #4a5568;
+    margin: 0 0 6px;
+  }
+
+  .page-content p.byline {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.95em;
+    color: #718096;
+    max-width: 600px;
+    margin: 14px auto 0;
+    line-height: 1.6;
+  }
+
+  .page-content hr {
+    border: none;
+    border-top: 2px solid #e2e8f0;
+    margin: 25px 0 35px;
+  }
+
+  .page-content h2 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.4em;
+    color: #1a2b4c;
+    margin: 40px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #f4f7fb;
+  }
+
+  .page-content h3 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+    color: #2c5282;
+    margin: 24px 0 8px;
+  }
+
+  .page-content p {
+    font-size: 1.05em;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0 0 16px;
+  }
+
+  .page-content ul {
+    margin: 0 0 18px;
+    padding-left: 24px;
+  }
+
+  .page-content li {
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+
+  .page-content li b {
+    color: #2c5282;
+  }
+
+  .page-content .transcription-box {
+    margin: 20px 0 30px;
+    padding: 20px 25px;
+    background: #f7fafc;
+    border-left: 4px solid #2c5282;
+    border-radius: 4px;
+    font-style: italic;
+  }
+
+  .page-content .transcription-box p {
+    margin: 0 0 8px;
+  }
+
+  .page-content .transcription-box p:last-child {
+    margin: 0;
+  }
+
+  .page-content .closing-box {
+    margin-top: 40px;
+    padding: 24px 30px;
+    background: #f7fafc;
+    border-left: 5px solid #2c5282;
+    border-radius: 4px;
+  }
+
+  .page-content .closing-box p {
+    margin: 0;
+  }
+
+  .page-content .article-footer {
+    margin-top: 45px;
+    text-align: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #718096;
+  }
+
+  @media (max-width: 640px) {
+    .page-content {
+      padding: 20px 12px 40px;
+    }
+    .page-content h1.main-title {
+      font-size: 1.7em;
+    }
+    .page-content p.byline {
+      font-size: 0.85em;
+    }
+  }
+</style>
+
+<div class="page-content">
+
+  <header class="title-block">
+    <h1 class="main-title">Data Engineers vs Software Engineers</h1>
+    <p class="subtitle">Why Do We Have Data Engineers?</p>
+    <p class="byline">I think software engineers can do it all. Is it right to say data engineers are special types of software engineers? Let's explore the distinction and why both roles are essential.</p>
+  </header>
+
+  <hr>
+
+  <h2>The Question</h2>
+  <p>Why do we have data engineers? I think software engineers can do it all. Is it right to say data engineers are special types of software engineers?</p>
+
+  <h2>Background Context</h2>
+  <p>First, read this — this is a transcription of a video posted by @TheEconomist on YouTube:</p>
+
+  <div class="transcription-box">
+    <p>Why are this year's World Cup tickets so expensive? From England '66 to Mexico '86, to Germany '06, while the players provide the World Cup spectacle, it is the fans who supply its soul. But FIFA risk pricing them out. This year's World Cup will be the most expensive ever. Adjusted for inflation, tickets cost four times what they did when America last hosted in 1994, and more than double Qatar, just four years ago. The cheapest group stage tickets have averaged around 200 dollars. A ticket to the final will set you back at least two Super Bowl tickets, or ten for the Champions League final.</p>
+
+    <p>It's all because FIFA has changed its commercial strategy. This is the first World Cup where FIFA has taken direct control of ticketing. It's embraced dynamic pricing, where prices rise with demand to squeeze the most money possible out of every seat. Demand for World Cup tickets has always outstripped supply. But until now, FIFA didn't see charging less than the market to bear as a bad thing. Cheaper tickets fill stadiums with passionate fans from around the world, and noisy stadiums won't make FIFA's main revenue rights — broadcasting streams and sponsorship deals — so valuable. Think of it as an input cost for the real product: televised football.</p>
+
+    <p>The last World Cup cycle brought in match-day receipts of about one billion dollars, but that was only 13 percent of total revenue. The vast majority came from broadcasting, marketing rights and licensing. This time, FIFA is aiming to bring 3 billion dollars — 28 percent of the total. Its president has made no secret of the model he is copying.</p>
+
+    <p>This is not the whole of it.</p>
+  </div>
+
+  <h2>Back to the Discussion</h2>
+  <p>I think the above work is made possible because of a data scientist.</p>
+
+  <h2>What I Know</h2>
+  <p>We have three types of data sources: data lakes, databases, and streaming data.</p>
+  <p>We need pipelines to extract data, and tools to transform and clean, and other pipelines to move it further for data scientists to use it on Power BI, Tableau, etc., and to data warehouses.</p>
+
+  <h2>The Question Remains</h2>
+  <p>Now, is this whole process, even to data science, not so vulnerable to AI takeover?</p>
+
+  <div class="closing-box">
+    <p>Data engineers build and maintain the infrastructure that makes data available, reliable, and accessible. Software engineers build applications and systems. The roles overlap but are distinct — data engineering is a specialization within the broader software engineering field, with its own unique challenges, tools, and expertise required to handle the scale and complexity of modern data systems.</p>
+  </div>
+
+  <div class="article-footer">Thoughts on data engineering vs software engineering</div>
+
+</div>
