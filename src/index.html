@@ -79,7 +79,7 @@ title: Notes Directory
       <li class="notes-list-item">
         <a href="{{ note.url }}">{{ note.data.title }}</a>
         {% if note.data.date %}
-          <time datetime="{{ note.data.date | dateToIso }}">{{ note.data.date | dateToIso }}</time>
+          <time datetime="{{ note.data.date }}">{{ note.data.date }}</time>
         {% endif %}
         {% if note.data.tags %}
           <div class="tags">
