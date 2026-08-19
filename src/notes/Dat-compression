@@ -1,0 +1,304 @@
+---
+layout: base.html
+title: "Functional-Composite Text Encoding: A Kolmogorov-Peer Paradigm"
+date: 2026-03-15
+tags:
+  - compression
+  - functional-encoding
+  - research
+  - data-storage
+---
+
+<style>
+  .paper-content {
+    max-width: 820px;
+    margin: 0;
+    padding: 20px 0 40px;
+    color: #1a2b4c;
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.7;
+  }
+
+  .paper-content h1 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    color: #0a1628;
+    margin: 0 0 4px;
+    letter-spacing: -0.5px;
+  }
+
+  .paper-content .subtitle {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.1em;
+    font-style: italic;
+    color: #4a6a8a;
+    margin: 0 0 20px;
+  }
+
+  .paper-content .byline {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.9em;
+    color: #5a7a9a;
+    margin: 0 0 4px;
+  }
+
+  .paper-content .version {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.85em;
+    color: #6a8aaa;
+    margin: 0 0 30px;
+  }
+
+  .paper-content hr {
+    border: none;
+    border-top: 2px solid #e8edf3;
+    margin: 25px 0 30px;
+  }
+
+  .paper-content h2 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.35em;
+    color: #0a1628;
+    margin: 38px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #f4f7fb;
+  }
+
+  .paper-content h3 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.08em;
+    color: #1a3a6b;
+    margin: 22px 0 8px;
+  }
+
+  .paper-content p {
+    font-size: 1.02em;
+    line-height: 1.7;
+    text-align: justify;
+    margin: 0 0 14px;
+  }
+
+  .paper-content ul {
+    margin: 0 0 16px;
+    padding-left: 22px;
+  }
+
+  .paper-content li {
+    line-height: 1.65;
+    margin-bottom: 6px;
+  }
+
+  .paper-content li b {
+    color: #1a3a6b;
+  }
+
+  .paper-content .closing-box {
+    margin-top: 36px;
+    padding: 22px 26px;
+    background: #f4f7fb;
+    border-left: 4px solid #1a3a6b;
+    border-radius: 2px;
+  }
+
+  .paper-content .closing-box p {
+    margin: 0;
+  }
+
+  .paper-content .footer-note {
+    margin-top: 40px;
+    padding: 16px 20px;
+    background: #f8fafc;
+    border: 1px solid #e8edf3;
+    border-radius: 4px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.85em;
+    color: #5a7a9a;
+  }
+
+  .paper-content .footer-note a {
+    color: #1a3a6b;
+  }
+
+  .paper-content .footer-note a:hover {
+    color: #2c5282;
+  }
+
+  @media (max-width: 600px) {
+    .paper-content {
+      padding: 10px 0 20px;
+    }
+    .paper-content h1 {
+      font-size: 1.5em;
+    }
+    .paper-content .subtitle {
+      font-size: 0.95em;
+    }
+  }
+</style>
+
+<div class="paper-content">
+
+  <h1>Functional-Composite Text Encoding:<br>A Kolmogorov-Peer Paradigm for Extreme Compression and Storage of Symbolic Data</h1>
+
+  <p class="subtitle">Proposal / Conceptual Framework</p>
+  <p class="byline"><strong>Author:</strong> Denis Kiprop</p>
+  <p class="version"><strong>Date:</strong> March 2026 &nbsp;|&nbsp; <strong>Version:</strong> 1.0 – Synthesis of discussions on functional representation of text</p>
+
+  <hr>
+
+  <h2>Executive Summary</h2>
+
+  <p>This document presents a novel conceptual framework for representing and storing textual data (letters, words, books, corpora) not as sequences of discrete characters or bits, but as <strong>compact mathematical descriptions</strong> of composite functions whose graphs visually render the text in a readable form.</p>
+
+  <p>Inspired by Kolmogorov complexity — the length of the shortest program that outputs a given string — we define a peer-level measure: the <strong>shortest functional description</strong> (in terms of base primitives, compositions, piecewise definitions, and affine transformations) whose evaluation over a domain produces a recognizable graphical rendering of the text.</p>
+
+  <p><strong>Key innovation:</strong></p>
+  <ul>
+    <li>Store only the tiny "generator" (function parameters + instruction sequence) on any medium (SSD, HDD, cloud).</li>
+    <li>Reconstruct the full text at read time by plotting/evaluating the function.</li>
+    <li>Exploit massive visual/geometric redundancy in natural language scripts (repeated strokes, common letter shapes, grammar patterns) for compression potentially orders of magnitude beyond classical entropy coders.</li>
+  </ul>
+
+  <p>The approach integrates transparently with existing storage stacks (OS, firmware, NAND) without hardware modification.</p>
+
+  <h2>1. Core Idea: Text as Composite Functions</h2>
+
+  <h3>1.1 Letters as Fixed Function Primitives</h3>
+
+  <p>Each character (uppercase A–Z, lowercase, digits, punctuation) is represented by <strong>exactly one canonical mathematical function</strong> (possibly piecewise) defined over a standardized local domain, e.g., x ∈ [-0.5, 0.5], y scaled to fit a unit-height glyph.</p>
+
+  <p>Examples of canonical primitives:</p>
+  <ul>
+    <li>U-shape letters (U, u, n, m, etc.): pure parabola y = x² (shifted/scaled)</li>
+    <li>V-shape: absolute value y = |x|</li>
+    <li>O, C, D, G: semicircles or elliptic arcs via √(1 - x²) or trig functions (cos, sin)</li>
+    <li>Straight strokes (I, l, t): vertical/constant lines (conditional restrictions)</li>
+    <li>S, Z: cubic polynomials (e.g., y = x³ - x) or sin/cos waves</li>
+    <li>A, K, X: combinations of linear pieces with absolutes or max/min</li>
+    <li>B, P, R: vertical line + lobe(s) via shifted semicircles</li>
+  </ul>
+
+  <p>Primitives use only elementary functions: polynomials (deg ≤ 5), absolute value, square root, basic trig, piecewise conditionals.</p>
+
+  <h3>1.2 Words, Sentences, Books as Composites</h3>
+
+  <p>A word or full text is constructed by:</p>
+  <ul>
+    <li>Placing each letter-primitive in sequential x-intervals (piecewise concatenation along the baseline).</li>
+    <li>Applying per-glyph affine transformations: translation (x/y shift for positioning/kerning), scaling (size variation), rotation (italic/angle), shear (slant).</li>
+    <li>Optional true function composition for stylistic effects (nesting transformations).</li>
+  </ul>
+
+  <p>The entire document becomes one (hierarchically described) piecewise/parametric function f: ℝ → ℝ whose graph, when plotted over a suitable domain, renders the readable text.</p>
+
+  <h2>2. Compression Mechanism</h2>
+
+  <p>Natural language exhibits extreme redundancy at the visual level:</p>
+  <ul>
+    <li>Repeated letters/words/phrases → reuse the same primitive ID + short transform params.</li>
+    <li>Common stroke patterns (curves, angles, verticals) → shared across many glyphs.</li>
+    <li>Predictable sequencing (spacing, alignment, capitalization) → short encoding rules.</li>
+  </ul>
+
+  <p>Resulting storage payload:</p>
+  <ul>
+    <li><strong>Fixed library</strong> of ~50–70 primitives (hardcoded in decoder → zero transmission cost).</li>
+    <li><strong>Variable part</strong>: sequence of instructions (bytecode-like): primitive ID, interval/position, scale, rotate θ, shear, kerning offset, reference to sub-composites for repeated words.</li>
+    <li>For book-length text: potentially kilobytes instead of megabytes (sub-linear scaling for highly patterned content).</li>
+  </ul>
+
+  <p>This is analogous to vector graphics (SVG) but purely functional/mathematical — infinite resolution, analytic properties (e.g., integral = "ink used").</p>
+
+  <h2>3. Integration with Storage Stack (Full Layer Coverage)</h2>
+
+  <h3>3.1 Physical NAND Flash (Untouched)</h3>
+
+  <p>SSD cells store charge levels (voltage states) representing bits. No change required.</p>
+
+  <h3>3.2 Firmware / Flash Translation Layer (FTL)</h3>
+
+  <p>FTL maps logical block addresses (LBAs) to physical NAND.</p>
+  <ul>
+    <li>Write the compact functional payload as ordinary binary sectors.</li>
+    <li>FTL treats it indistinguishably from any other data (images, executables).</li>
+    <li>No firmware patching needed in production use.</li>
+  </ul>
+
+  <h3>3.3 OS / Driver / File-System Layer (Injection & Reconstruction Point)</h3>
+
+  <p><strong>Encoding / Write:</strong></p>
+  <ol>
+    <li>Input text → map to sequence of primitive IDs + transforms.</li>
+    <li>Serialize to binary payload (header + primitive refs + instruction stream).</li>
+    <li>Write via standard file API → OS → driver → SSD.</li>
+  </ol>
+
+  <p><strong>Decoding / Read:</strong></p>
+  <ol>
+    <li>Read binary payload as normal file.</li>
+    <li>Custom layer (user-mode library, FUSE filesystem, kernel filter driver):</li>
+  </ol>
+
+  <ul>
+    <li>Parse payload.</li>
+    <li>Evaluate composite function numerically (sample at high resolution).</li>
+    <li>Rasterize graph → apply OCR/shape recognition or direct glyph-to-text mapping → output original text.</li>
+  </ul>
+
+  <p>Compatible with any modern OS (Windows, Linux, macOS) via user-space tools or lightweight drivers.</p>
+
+  <h2>4. New Complexity Measure</h2>
+
+  <p>We introduce <strong>functional-visual Kolmogorov complexity</strong>:<br>
+  K_func(s) = min |description| over programs in a fixed function algebra that generate a graph recognizably rendering string s.</p>
+
+  <p>This is:</p>
+  <ul>
+    <li>Uncomputable in general (like classic K).</li>
+    <li>Approximable with restricted primitives.</li>
+    <li>Potentially smaller than string-based K for shape-redundant data (natural scripts, DNA motifs, music notation).</li>
+  </ul>
+
+  <p>Ties into observer-relative complexity: depends on the "drawer" (plotter + recognizer).</p>
+
+  <h2>5. Advantages</h2>
+
+  <ul>
+    <li>Extreme compression for redundant text.</li>
+    <li>Infinite resolution / perfect scaling (vector nature).</li>
+    <li>Analytic properties (derivatives = curvature, integrals = length).</li>
+    <li>Unified representation: text = executable mathematics.</li>
+  </ul>
+
+  <h2>6. Challenges &amp; Roadmap</h2>
+
+  <ul>
+    <li>Optimize primitive set for coverage vs. minimality.</li>
+    <li>Fast real-time evaluation for large texts.</li>
+    <li>Robust error correction on payload.</li>
+    <li>Proof-of-concept: short text → full book.</li>
+    <li>Explore extensions: handwriting styles, fonts as parameter families, multi-line layout grammars.</li>
+  </ul>
+
+  <p>This framework redefines symbolic storage: <strong>store the generator, not the expanded data</strong>.</p>
+
+  <div class="closing-box">
+    <p>A true geometric-functional peer to Kolmogorov complexity.</p>
+  </div>
+
+  <p style="margin-top:30px;"><strong>End of Document</strong></p>
+
+  <div class="footer-note">
+    <p><strong>To convert this to PDF:</strong></p>
+    <ul>
+      <li><strong>Online:</strong> Copy-paste the raw markdown into <a href="https://md-to-pdf.fly.dev/" target="_blank">md-to-pdf.fly.dev</a></li>
+      <li><strong>Python local:</strong> <code>pip install markdown-pdf</code> or use <code>pandoc document.md -o document.pdf</code></li>
+      <li><strong>VS Code:</strong> Install "Markdown PDF" extension → open file → Ctrl+Shift+P → "Markdown PDF: Export (pdf)"</li>
+      <li><strong>Google Docs:</strong> Paste → File → Download → PDF Document</li>
+    </ul>
+  </div>
+
+</div>
