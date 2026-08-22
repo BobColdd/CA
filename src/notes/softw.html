@@ -1,12 +1,11 @@
 ---
 layout: base.html
-title: "Functional-Composite Text Encoding: A Kolmogorov-Peer Paradigm"
-date: 2026-03-15
+title: "Understanding Software Installation"
+date: 2026-08-22
 tags:
-  - compression
-  - functional-encoding
-  - research
-  - data-storage
+  - software-installation
+  - fundamentals
+  - operating-systems
 ---
 
 <style>
@@ -24,36 +23,8 @@ tags:
     font-weight: 700;
     font-size: 2em;
     color: #0a1628;
-    margin: 0 0 4px;
+    margin: 0 0 12px;
     letter-spacing: -0.5px;
-  }
-
-  .paper-content .subtitle {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 1.1em;
-    font-style: italic;
-    color: #4a6a8a;
-    margin: 0 0 20px;
-  }
-
-  .paper-content .byline {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 0.9em;
-    color: #5a7a9a;
-    margin: 0 0 4px;
-  }
-
-  .paper-content .version {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 0.85em;
-    color: #6a8aaa;
-    margin: 0 0 30px;
-  }
-
-  .paper-content hr {
-    border: none;
-    border-top: 2px solid #e8edf3;
-    margin: 25px 0 30px;
   }
 
   .paper-content h2 {
@@ -95,29 +66,6 @@ tags:
     color: #1a3a6b;
   }
 
-  .paper-content .figure {
-    margin: 24px 0 20px;
-    text-align: center;
-    background: #f8fafc;
-    padding: 20px;
-    border-radius: 6px;
-    border: 1px solid #e8edf3;
-  }
-
-  .paper-content .figure img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-  }
-
-  .paper-content .figure .caption {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 0.9em;
-    color: #5a7a9a;
-    margin-top: 10px;
-    font-style: italic;
-  }
-
   .paper-content .closing-box {
     margin-top: 36px;
     padding: 22px 26px;
@@ -130,25 +78,6 @@ tags:
     margin: 0;
   }
 
-  .paper-content .footer-note {
-    margin-top: 40px;
-    padding: 16px 20px;
-    background: #f8fafc;
-    border: 1px solid #e8edf3;
-    border-radius: 4px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 0.85em;
-    color: #5a7a9a;
-  }
-
-  .paper-content .footer-note a {
-    color: #1a3a6b;
-  }
-
-  .paper-content .footer-note a:hover {
-    color: #2c5282;
-  }
-
   @media (max-width: 600px) {
     .paper-content {
       padding: 10px 0 20px;
@@ -156,203 +85,168 @@ tags:
     .paper-content h1 {
       font-size: 1.5em;
     }
-    .paper-content .subtitle {
-      font-size: 0.95em;
-    }
-    .paper-content .figure {
-      padding: 12px;
-    }
   }
 </style>
 
 <div class="paper-content">
 
-  <h1>Functional-Composite Text Encoding:<br>A Kolmogorov-Peer Paradigm for Extreme Compression and Storage of Symbolic Data</h1>
+  <h1>Understanding Software Installation</h1>
 
-  <p class="subtitle">Proposal / Conceptual Framework</p>
-  <p class="byline"><strong>Author:</strong> Denis (@Cridocoldd)</p>
-  <p class="version"><strong>Date:</strong> March 2026 &nbsp;|&nbsp; <strong>Version:</strong> 1.0 – Synthesis of discussions on functional representation of text</p>
+  <p>For one to say that they have <strong>truly understood software installation</strong>, they must have a clear understanding of what happens beyond simply downloading a program and clicking <strong>Next</strong>, <strong>Next</strong>, and <strong>Install</strong>.</p>
 
-  <hr>
+  <p>Software installation is not just about placing a program on a computer. To understand it properly, one must understand how the operating system organizes programs, how it locates them, how they are executed, and how different software components interact with the environment of the operating system.</p>
 
-  <h2>Executive Summary</h2>
+  <h2>Environment Variables</h2>
 
-  <p>This document presents a novel conceptual framework for representing and storing textual data (letters, words, books, corpora) not as sequences of discrete characters or bits, but as <strong>compact mathematical descriptions</strong> of composite functions whose graphs visually render the text in a readable form.</p>
+  <p>A person must have a clear understanding of <strong>environment variables</strong>, both <strong>User Variables</strong> and <strong>System Variables</strong>.</p>
 
-  <p>Inspired by Kolmogorov complexity — the length of the shortest program that outputs a given string — we define a peer-level measure: the <strong>shortest functional description</strong> (in terms of base primitives, compositions, piecewise definitions, and affine transformations) whose evaluation over a domain produces a recognizable graphical rendering of the text.</p>
+  <p>Environment variables are values used by the operating system and applications to determine important information about the environment in which programs run. Some variables apply only to a particular user, while others affect the entire system.</p>
 
-  <div class="figure">
-    <img src="/assets/images/kolmogorov-peer-diagram.png" alt="Conceptual diagram of functional-composite text encoding showing text transformed through primitives, composition, and rendering to recreate the original text">
-    <div class="caption">Figure 1: Conceptual overview of the functional-composite encoding pipeline — text is decomposed into functional primitives, composed with transformations, and rendered back to text at read time.</div>
-  </div>
+  <p><strong>User environment variables</strong> apply specifically to one user account. They can define locations and settings that are relevant to programs used by that particular user.</p>
 
-  <p><strong>Key innovation:</strong></p>
+  <p><strong>System environment variables</strong>, on the other hand, apply to the entire operating system and can affect all users and applications on the computer.</p>
+
+  <p>Understanding the difference between these two is important because installing or configuring software may sometimes require changing a variable for only one user or for the whole system.</p>
+
+  <h2>Understanding the PATH Variable</h2>
+
+  <p>One must also clearly understand the <strong>PATH environment variable</strong>.</p>
+
+  <p>PATH is one of the most important environment variables because it helps the operating system locate executable programs.</p>
+
+  <p>For example, when a person types a command such as <code>python</code>, <code>java</code>, or <code>node</code> into a terminal or command prompt, the operating system searches through the directories listed in the PATH variable to find the corresponding executable.</p>
+
+  <p>If the executable is not located in one of those directories, the command may not work, even though the software is already installed on the computer.</p>
+
+  <p>This is why a person may install Python successfully but still receive an error when they type <code>python</code> in the command prompt. The software may exist on the computer, but its executable location may not have been added to PATH.</p>
+
+  <p>Therefore, understanding software installation requires understanding not only <strong>where the software has been installed</strong>, but also <strong>how the operating system finds and executes it</strong>.</p>
+
+  <h2>Program Files and Program Files (x86)</h2>
+
+  <p>A person must also clearly understand the <strong>Program Files</strong> and <strong>Program Files (x86)</strong> directories in Windows.</p>
+
+  <p>On a 64-bit version of Windows, these directories generally help separate applications based on their architecture.</p>
+
+  <p><strong>Program Files</strong> is generally used for 64-bit applications.</p>
+
+  <p><strong>Program Files (x86)</strong> is generally used for 32-bit applications running on a 64-bit version of Windows.</p>
+
+  <p>The existence of these two directories is connected to compatibility. A modern 64-bit operating system can often run older 32-bit applications, but the system needs to maintain a clear structure for managing the different types of software and their components.</p>
+
+  <p>Therefore, when installing software, it is important to understand why a program is being placed in a particular directory rather than simply accepting the installation location without understanding it.</p>
+
+  <h2>Common Files</h2>
+
+  <p>One must also understand the role of <strong>Common Files</strong>.</p>
+
+  <p>Some software components are shared by more than one application. Instead of every program storing its own completely separate copy of a shared component, some components may be placed in shared locations such as Common Files.</p>
+
+  <p>These components can include libraries, frameworks, or other resources required by multiple programs.</p>
+
+  <p>Understanding this helps explain why uninstalling or manually deleting files from program directories can sometimes affect other applications. A program may depend on components that are shared with other software on the system.</p>
+
+  <p>Therefore, software installation is not simply about one application existing independently in one folder. Applications may depend on other files, libraries, runtimes, services, and system configurations.</p>
+
+  <h2>Understanding Executable Files</h2>
+
+  <p>A person who truly understands software installation must also understand different types of executable and installation files.</p>
+
+  <p>In Windows, one of the most familiar executable file extensions is:</p>
+
   <ul>
-    <li>Store only the tiny "generator" (function parameters + instruction sequence) on any medium (SSD, HDD, cloud).</li>
-    <li>Reconstruct the full text at read time by plotting/evaluating the function.</li>
-    <li>Exploit massive visual/geometric redundancy in natural language scripts (repeated strokes, common letter shapes, grammar patterns) for compression potentially orders of magnitude beyond classical entropy coders.</li>
+    <li><code>.exe</code></li>
   </ul>
 
-  <p>The approach integrates transparently with existing storage stacks (OS, firmware, NAND) without hardware modification.</p>
+  <p>An <code>.exe</code> file is commonly used to launch a program or start an installation process.</p>
 
-  <h2>1. Core Idea: Text as Composite Functions</h2>
+  <p>Another common format is:</p>
 
-  <h3>1.1 Letters as Fixed Function Primitives</h3>
-
-  <p>Each character (uppercase A–Z, lowercase, digits, punctuation) is represented by <strong>exactly one canonical mathematical function</strong> (possibly piecewise) defined over a standardized local domain, e.g., x ∈ [-0.5, 0.5], y scaled to fit a unit-height glyph.</p>
-
-  <div class="figure">
-    <img src="/assets/images/glyph-primitives.png" alt="Mathematical representations of common letter shapes as function primitives">
-    <div class="caption">Figure 2: Canonical function primitives for common letter shapes — each glyph maps to one or more elementary mathematical functions.</div>
-  </div>
-
-  <p>Examples of canonical primitives:</p>
   <ul>
-    <li>U-shape letters (U, u, n, m, etc.): pure parabola y = x² (shifted/scaled)</li>
-    <li>V-shape: absolute value y = |x|</li>
-    <li>O, C, D, G: semicircles or elliptic arcs via √(1 - x²) or trig functions (cos, sin)</li>
-    <li>Straight strokes (I, l, t): vertical/constant lines (conditional restrictions)</li>
-    <li>S, Z: cubic polynomials (e.g., y = x³ - x) or sin/cos waves</li>
-    <li>A, K, X: combinations of linear pieces with absolutes or max/min</li>
-    <li>B, P, R: vertical line + lobe(s) via shifted semicircles</li>
+    <li><code>.msi</code></li>
   </ul>
 
-  <p>Primitives use only elementary functions: polynomials (deg ≤ 5), absolute value, square root, basic trig, piecewise conditionals.</p>
+  <p>An <code>.msi</code> file is a Windows Installer package used for installing, maintaining, and removing software.</p>
 
-  <h3>1.2 Words, Sentences, Books as Composites</h3>
+  <p>However, not every file that is downloaded is immediately executable.</p>
 
-  <div class="figure">
-    <img src="/assets/images/composite-construction.png" alt="Diagram showing how letters combine into words and sentences through functional composition">
-    <div class="caption">Figure 3: Hierarchical composition — individual letter primitives combine via affine transformations and concatenation to form words, sentences, and entire documents.</div>
-  </div>
+  <p>For example:</p>
 
-  <p>A word or full text is constructed by:</p>
   <ul>
-    <li>Placing each letter-primitive in sequential x-intervals (piecewise concatenation along the baseline).</li>
-    <li>Applying per-glyph affine transformations: translation (x/y shift for positioning/kerning), scaling (size variation), rotation (italic/angle), shear (slant).</li>
-    <li>Optional true function composition for stylistic effects (nesting transformations).</li>
+    <li><code>.zip</code></li>
   </ul>
 
-  <p>The entire document becomes one (hierarchically described) piecewise/parametric function f: ℝ → ℝ whose graph, when plotted over a suitable domain, renders the readable text.</p>
+  <p>A <code>.zip</code> file is primarily a compressed archive. It may contain executable files, documents, libraries, or an entire portable application, but the <code>.zip</code> file itself is not simply the same thing as an executable program. It normally needs to be extracted before its contents can be used.</p>
 
-  <h2>2. Compression Mechanism</h2>
+  <p>Understanding the difference between an <code>.exe</code> file and a <code>.zip</code> file is important. One may contain an installation program, while the other may simply contain files that must be extracted and configured manually.</p>
 
-  <p>Natural language exhibits extreme redundancy at the visual level:</p>
+  <h2>Software Installation in Linux</h2>
+
+  <p>The concept is different in Linux.</p>
+
+  <p>Linux does not rely on a single executable extension equivalent to <code>.exe</code>. Whether a file can be executed is more closely related to its contents, file format, and permissions.</p>
+
+  <p>For example:</p>
+
   <ul>
-    <li>Repeated letters/words/phrases → reuse the same primitive ID + short transform params.</li>
-    <li>Common stroke patterns (curves, angles, verticals) → shared across many glyphs.</li>
-    <li>Predictable sequencing (spacing, alignment, capitalization) → short encoding rules.</li>
+    <li><code>.sh</code> files are commonly shell scripts.</li>
+    <li>A binary executable may have no file extension at all.</li>
+    <li><code>.deb</code> files are software packages commonly used by Debian-based distributions such as Ubuntu.</li>
+    <li><code>.rpm</code> files are package formats used by distributions in the Red Hat family and others.</li>
   </ul>
 
-  <div class="figure">
-    <img src="/assets/images/software.png" alt="Chart showing compression ratios comparing functional encoding to standard methods">
-    <div class="caption">Figure 4: Estimated compression ratios for functional-composite encoding vs. classical entropy coders — sub-linear scaling for highly patterned content.</div>
-  </div>
+  <p>A user must therefore understand that software installation is handled differently depending on the operating system.</p>
 
-  <p>Resulting storage payload:</p>
+  <p>In Linux, a program may be installed through a package manager, from a <code>.deb</code> or <code>.rpm</code> package, by running a script, by compiling source code, or by manually placing an executable in an appropriate location.</p>
+
+  <p>The concept of PATH is also important in Linux. Directories such as <code>/usr/bin</code>, <code>/usr/local/bin</code>, and others may contain executable programs that can be accessed directly from the terminal because they are included in the system's PATH.</p>
+
+  <h2>Software Installation in macOS</h2>
+
+  <p>macOS also has its own software formats.</p>
+
+  <p>For example:</p>
+
   <ul>
-    <li><strong>Fixed library</strong> of ~50–70 primitives (hardcoded in decoder → zero transmission cost).</li>
-    <li><strong>Variable part</strong>: sequence of instructions (bytecode-like): primitive ID, interval/position, scale, rotate θ, shear, kerning offset, reference to sub-composites for repeated words.</li>
-    <li>For book-length text: potentially kilobytes instead of megabytes (sub-linear scaling for highly patterned content).</li>
+    <li><code>.app</code> represents an application bundle.</li>
+    <li><code>.dmg</code> is a disk image commonly used to distribute applications.</li>
+    <li><code>.pkg</code> is an installer package used to install software.</li>
   </ul>
 
-  <p>This is analogous to vector graphics (SVG) but purely functional/mathematical — infinite resolution, analytic properties (e.g., integral = "ink used").</p>
+  <p>An application ending in <code>.app</code> may appear to be a single file, but it is actually a structured bundle containing the files and resources required by the application.</p>
 
-  <h2>3. Integration with Storage Stack (Full Layer Coverage)</h2>
+  <p>A <code>.dmg</code> file is commonly opened to access an application or installer, while a <code>.pkg</code> file usually provides a more structured installation process.</p>
 
-  <h3>3.1 Physical NAND Flash (Untouched)</h3>
+  <p>Therefore, software installation differs across Windows, Linux, and macOS, even though the general objective remains the same: placing the required software components on the system and configuring them so that the operating system and the user can access and use them.</p>
 
-  <p>SSD cells store charge levels (voltage states) representing bits. No change required.</p>
+  <h2>The Real Meaning of Understanding Software Installation</h2>
 
-  <h3>3.2 Firmware / Flash Translation Layer (FTL)</h3>
+  <p>To truly understand software installation, one must go beyond the ability to successfully click an installer.</p>
 
-  <p>FTL maps logical block addresses (LBAs) to physical NAND.</p>
-  <ul>
-    <li>Write the compact functional payload as ordinary binary sectors.</li>
-    <li>FTL treats it indistinguishably from any other data (images, executables).</li>
-    <li>No firmware patching needed in production use.</li>
-  </ul>
-
-  <h3>3.3 OS / Driver / File-System Layer (Injection & Reconstruction Point)</h3>
-
-  <div class="figure">
-    <img src="/assets/images/storage-stack.png" alt="Diagram showing how the encoding integrates with the storage stack from application to NAND flash">
-    <div class="caption">Figure 5: Integration with the storage stack — the encoding operates at the OS/driver layer, transparent to firmware and physical media.</div>
-  </div>
-
-  <p><strong>Encoding / Write:</strong></p>
-  <ol>
-    <li>Input text → map to sequence of primitive IDs + transforms.</li>
-    <li>Serialize to binary payload (header + primitive refs + instruction stream).</li>
-    <li>Write via standard file API → OS → driver → SSD.</li>
-  </ol>
-
-  <p><strong>Decoding / Read:</strong></p>
-  <ol>
-    <li>Read binary payload as normal file.</li>
-    <li>Custom layer (user-mode library, FUSE filesystem, kernel filter driver):</li>
-  </ol>
+  <p>A person should understand:</p>
 
   <ul>
-    <li>Parse payload.</li>
-    <li>Evaluate composite function numerically (sample at high resolution).</li>
-    <li>Rasterize graph → apply OCR/shape recognition or direct glyph-to-text mapping → output original text.</li>
-  </ul>
-
-  <p>Compatible with any modern OS (Windows, Linux, macOS) via user-space tools or lightweight drivers.</p>
-
-  <h2>4. New Complexity Measure</h2>
-
-  <p>We introduce <strong>functional-visual Kolmogorov complexity</strong>:<br>
-  K_func(s) = min |description| over programs in a fixed function algebra that generate a graph recognizably rendering string s.</p>
-
-  <div class="figure">
-    <img src="/assets/images/complexity-comparison.png" alt="Comparison chart of Kolmogorov complexity vs functional-visual complexity for different text types">
-    <div class="caption">Figure 6: Comparison of classical Kolmogorov complexity (K) and functional-visual Kolmogorov complexity (K_func) — showing potential reduction for shape-redundant natural language data.</div>
-  </div>
-
-  <p>This is:</p>
-  <ul>
-    <li>Uncomputable in general (like classic K).</li>
-    <li>Approximable with restricted primitives.</li>
-    <li>Potentially smaller than string-based K for shape-redundant data (natural scripts, DNA motifs, music notation).</li>
-  </ul>
-
-  <p>Ties into observer-relative complexity: depends on the "drawer" (plotter + recognizer).</p>
-
-  <h2>5. Advantages</h2>
-
-  <ul>
-    <li>Extreme compression for redundant text.</li>
-    <li>Infinite resolution / perfect scaling (vector nature).</li>
-    <li>Analytic properties (derivatives = curvature, integrals = length).</li>
-    <li>Unified representation: text = executable mathematics.</li>
-  </ul>
-
-  <h2>6. Challenges &amp; Roadmap</h2>
-
-  <ul>
-    <li>Optimize primitive set for coverage vs. minimality.</li>
-    <li>Fast real-time evaluation for large texts.</li>
-    <li>Robust error correction on payload.</li>
-    <li>Proof-of-concept: short text → full book.</li>
-    <li>Explore extensions: handwriting styles, fonts as parameter families, multi-line layout grammars.</li>
+    <li>Where the software is installed.</li>
+    <li>Why it is installed in that particular location.</li>
+    <li>Whether the software is 32-bit or 64-bit.</li>
+    <li>The difference between <strong>Program Files</strong> and <strong>Program Files (x86)</strong>.</li>
+    <li>The role of <strong>Common Files</strong> and shared components.</li>
+    <li>The difference between <strong>User Variables</strong> and <strong>System Variables</strong>.</li>
+    <li>How the <strong>PATH</strong> variable allows the operating system to locate executable programs.</li>
+    <li>The difference between executable files, installer packages, and compressed archives.</li>
+    <li>How software installation differs between Windows, Linux, and macOS.</li>
+    <li>Why a program may be installed correctly but still fail to run from the command line.</li>
+    <li>How permissions, file locations, dependencies, and system configuration can affect whether software works correctly.</li>
   </ul>
 
   <div class="closing-box">
-    <p>This framework redefines symbolic storage: <strong>store the generator, not the expanded data</strong>. A true geometric-functional peer to Kolmogorov complexity.</p>
-  </div>
+    <p>Therefore, <strong>software installation should not be understood as simply installing a program</strong>.</p>
 
-  <p style="margin-top:30px;"><strong>End of Document</strong></p>
+    <p>To understand software installation properly is to understand the environment into which the software is being installed.</p>
 
-  <div class="footer-note">
-    <p><strong>To convert this to PDF:</strong></p>
-    <ul>
-      <li><strong>Online:</strong> Copy-paste the raw markdown into <a href="https://md-to-pdf.fly.dev/" target="_blank">md-to-pdf.fly.dev</a></li>
-      <li><strong>Python local:</strong> <code>pip install markdown-pdf</code> or use <code>pandoc document.md -o document.pdf</code></li>
-      <li><strong>VS Code:</strong> Install "Markdown PDF" extension → open file → Ctrl+Shift+P → "Markdown PDF: Export (pdf)"</li>
-      <li><strong>Google Docs:</strong> Paste → File → Download → PDF Document</li>
-    </ul>
+    <p>It means understanding <strong>where the files go, how the operating system recognizes them, how the executable is located, what dependencies are required, how environment variables influence execution, and how the operating system makes the software available to the user</strong>.</p>
+
+    <p>Only then can a person move beyond being someone who simply installs software and become someone who actually understands <strong>what software installation means</strong>.</p>
   </div>
 
 </div>
